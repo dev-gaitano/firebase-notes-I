@@ -12,29 +12,30 @@
 <body>
   <header>
     <h1>Ascend</h1>
-    <button type=""></button>
+    <div id="container-user">
+      <img src="" alt="img">
+    </div>
   </header>
   <main>
-    <div>
-      <div>
-        <input type="" name="" value="">
-        <button type=""></button>
-      </div>
-      <div>
-        <img src="" alt=""> 
-      </div>
-    </div> 
-    <div>
-      <ul>
-        <li></li>
-      </ul>
+    <div id="container-search">
+      <input id="search-bar" placeholder="Search notes">
+      <button id="search-button" class="button-primary">sr</button>
+      <button class="button-primary" onclick="toggle()">th</button>
     </div>
+    <ul id="notes-list">
+      <li></li>
+    </ul>
   </main>
   <footer>
-    <button type=""></button>
-    <input type="" name="" value="">
+    <button id="new-note-button">ad</button>
+    <input id="new-note-input" placeholder="Start typing...">
   </footer>
 
+  <script>
+    const toggle = () => {
+      document.body.classlist.toggle("light");
+    }
+  </script>
   <script src="./js/firebase-config.js" type="module" async defer></script>
   <script src="./js/app.js" type="module" defer></script>
 </body>
