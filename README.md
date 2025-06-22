@@ -14,7 +14,10 @@ firebase-notes/
 ├── public/                 # Firebase Hosting static files
 │   ├── assets/             # Static assets (images, fonts, etc.)
 │   ├── css/                # Stylesheets
+│   │   └── style.css       # Main stylesheet
 │   ├── js/                 # Client-side JavaScript
+│   │   ├── app.js          # Main application logic
+│   │   └── firebase-config.js # Firebase initialization
 │   └── index.html          # Main HTML file
 ├── .firebaserc             # Firebase project configuration
 ├── .git/                   # Git repository data
