@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
+
 * {
   padding: 0px;
   margin: 0px;
+  border: none;
 }
+
 :root {
   --bg-dark: hsl(0 0% 0%);
   --bg: hsl(0 0% 5%);
@@ -16,6 +20,42 @@
   --br: 12px;
   --br-sm: 8px;
 }
+
+.sulphur-point-light {
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.sulphur-point-regular {
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sulphur-point-bold {
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.material-symbols-outlined {
+  font-size: 32px;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 32;
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: normal;
+  font-display: block;
+  line-height: 1;
+  white-space: nowrap;
+  direction: ltr;
+  color: var(--text-muted);
+}
+
 body.dark {
   --bg-dark: hsl(246 30% 2%);
   --bg: hsl(246 18% 5%);
@@ -32,6 +72,7 @@ body.dark {
   --success: hsl(146 17% 59%);
   --info: hsl(217 28% 65%);
 }
+
 body.light {
   --bg-dark: hsl(245 16% 91%);
   --bg: hsl(245 36% 96%);
@@ -48,6 +89,7 @@ body.light {
   --success: hsl(147 19% 36%);
   --info: hsl(217 22% 41%);
 }
+
 body {
   background: var(--bg-dark);
   display: flex;
@@ -57,37 +99,48 @@ body {
   height: 90vh;
   padding: var(--margin-lg);
 }
+
 header {
   color: var(--text);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid 1px var(--bg); 
   height: 6%;
 }
+
 main {
-  border: solid 1px var(--bg); 
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--margin-lg);
 }
+
 footer {
-  border: solid 1px var(--bg); 
   height: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--margin-m);
 }
+
 #container-user {
   background: var(--bg);
   border-radius: var(--br-full);
   height: 100%;
   width: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+#container-user img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: var(--br-full);
+}
+
 #container-search {
-  border: solid 1px var(--bg-light);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,39 +148,45 @@ footer {
   height: 6%;
   width: 100%;
 }
+
 #notes-list {
   background: var(--bg);
-  border: solid 1px var(--bg-light);
   border-radius: var(--br-lg);
   display: flex;
   flex-grow: 1;
 }
+
 #search-bar {
   background: var(--bg-light);
-  border: none;
   border-radius: var(--br-full);
   height: 100%;
   display: flex;
   flex-grow: 1;
   padding-left: var(--margin-m);
 }
+
 .button-primary {
   background: var(--bg);
-  border: none;
   border-radius: var(--br-full);
   height: 100%;
   width: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 #new-note-button {
   background: var(--bg-light);
-  border: none;
   border-radius: var(--br-full);
   height: 100%;
   width: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 #new-note-input {
   background: var(--bg-light);
-  border: none;
   border-radius: var(--br-full);
   height: 100%;
   display: flex;
