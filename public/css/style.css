@@ -206,12 +206,20 @@ footer {
   margin-bottom: var(--margin-m);
 }
 
+#note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #note-title {
   font-size: 16px;
 }
 
 #last-edited {
-  font-size: 12px;
+  font-size: 8px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #note-preview {
