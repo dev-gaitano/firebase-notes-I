@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   padding: 0px;
   margin: 0px;
   border: none;
+}
+
+ul {
+  list-style: none;
 }
 
 :root {
@@ -47,21 +52,24 @@ body.light {
   --info: hsl(217 22% 41%);
 }
 
-.sulphur-point-light {
-  font-family: "Sulphur Point", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.sulphur-point-regular {
-  font-family: "Sulphur Point", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .sulphur-point-bold {
   font-family: "Sulphur Point", sans-serif;
   font-weight: 700;
+  font-style: normal;
+}
+
+
+.montserrat-semi-bold {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -88,7 +96,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: var(--margin-lg);
-  height: 90vh;
+  height: 88vh;
   padding: var(--margin-lg);
 }
 
@@ -142,9 +150,10 @@ footer {
 }
 
 #notes-list {
-  background: var(--bg);
+  background: var(--bg-dark);
   border-radius: var(--br-lg);
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
 
@@ -184,4 +193,38 @@ footer {
   display: flex;
   flex-grow: 1;
   padding-left: var(--margin-m);
+}
+
+.note-item {
+  background: var(--bg);
+  border-radius: var(--br-lg);
+  padding: var(--margin-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--margin-m);
+}
+
+#note-title {
+  font-size: 16px;
+}
+
+#last-edited {
+  font-size: 12px;
+}
+
+#note-preview {
+  font-size: 12px;
+}
+
+#note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#note-title {
+  color: var(--text);
 }
