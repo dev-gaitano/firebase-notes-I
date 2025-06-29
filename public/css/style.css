@@ -97,7 +97,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   gap: var(--margin-lg);
-  height: 88vh;
   padding: var(--margin-lg);
 }
 
@@ -141,7 +140,7 @@ footer {
   border-radius: var(--br-full);
 }
 
-#container-search {
+#container-options {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -164,13 +163,31 @@ footer {
   display: none;
 }
 
-#search-bar {
+#container-search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   background: var(--bg-light);
   border-radius: var(--br-full);
+  flex: 1;
+}
+
+#search-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  margin: 0 var(--margin-sm) 0 var(--margin-m);
+  color: var(--text-more-muted);
+}
+
+#search-bar {
+  background: transparent;
+  border: none;
   height: 40px;
-  display: flex;
-  flex-grow: 1;
-  padding-left: var(--margin-m);
+}
+
+#search-bar::placeholder {
+  color: var(--text-more-muted);
 }
 
 .button-primary {
@@ -181,6 +198,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#light-theme-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--text-muted);
 }
 
 #new-note-button {
@@ -200,6 +223,10 @@ footer {
   display: flex;
   flex-grow: 1;
   padding-left: var(--margin-m);
+}
+
+#new-note-input::placeholder {
+  color: var(--text-more-muted);
 }
 
 .note-item {

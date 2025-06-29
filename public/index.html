@@ -28,15 +28,34 @@
     </div>
   </header>
   <main>
-    <div id="container-search">
-      <input id="search-bar" placeholder="Search notes">
+    <div id="container-options">
+      <div id="container-search">
+        <svg id="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input id="search-bar" placeholder="Search notes">
+      </div>
       <button id="sort-button" class="button-primary">
         <span class="material-symbols-outlined">
           filter_list
         </span>
       </button>
       <button id="theme-button" class="button-primary">
+        <svg id="light-theme-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sun rays -->
+          <path d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
 
+          <!-- Sun center circle -->
+          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none" />
+        </svg>
       </button>
     </div>
     <ul id="notes-list">
@@ -46,7 +65,7 @@
           <p class="montserrat-semi-bold">⋯</p>
         </div>
         <p id="note-preview" class="montserrat-regular">This is a test note. I'm using this to test the
-          note layout</p>
+          note...</p>
         <p id="last-edited" class="montserrat-regular">Sat, Jun 28</p>
       </li>
       <li class="note-item">
@@ -55,7 +74,7 @@
           <p class="montserrat-semi-bold">⋯</p>
         </div>
         <p id="note-preview" class="montserrat-regular">This is a test note. I'm using this to test the
-          note layout</p>
+          note...</p>
         <p id="last-edited" class="montserrat-regular">Sat, Jun 28</p>
       </li>
       <li class="note-item">
@@ -64,7 +83,7 @@
           <p class="montserrat-semi-bold">⋯</p>
         </div>
         <p id="note-preview" class="montserrat-regular">This is a test note. I'm using this to test the
-          note layout</p>
+          note...</p>
         <p id="last-edited" class="montserrat-regular">Sat, Jun 28</p>
       </li>
       <li class="note-item">
@@ -73,7 +92,7 @@
           <p class="montserrat-semi-bold">⋯</p>
         </div>
         <p id="note-preview" class="montserrat-regular">This is a test note. I'm using this to test the
-          note layout</p>
+          note...</p>
         <p id="last-edited" class="montserrat-regular">Sat, Jun 28</p>
       </li>
       <li class="note-item">
@@ -82,7 +101,7 @@
           <p class="montserrat-semi-bold">⋯</p>
         </div>
         <p id="note-preview" class="montserrat-regular">This is a test note. I'm using this to test the
-          note layout</p>
+          note...</p>
         <p id="last-edited" class="montserrat-regular">Sat, Jun 28</p>
       </li>
       <li class="note-item">
@@ -91,7 +110,7 @@
           <p class="montserrat-semi-bold">⋯</p>
         </div>
         <p id="note-preview" class="montserrat-regular">This is a test note. I'm using this to test the
-          note layout</p>
+          note...</p>
         <p id="last-edited" class="montserrat-regular">Sat, Jun 28</p>
       </li>
     </ul>
