@@ -123,6 +123,13 @@ footer {
   gap: var(--margin-m);
 }
 
+#brand {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+
 #container-user {
   background: var(--bg);
   border-radius: var(--br-full);
@@ -200,10 +207,16 @@ footer {
   align-items: center;
 }
 
+#sort-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--text-more-muted);
+}
+
 #light-theme-icon {
   width: 20px;
   height: 20px;
-  color: var(--text-muted);
+  color: var(--text-more-muted);
 }
 
 #new-note-button {
@@ -216,6 +229,12 @@ footer {
   align-items: center;
 }
 
+#plus-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--text-muted);
+}
+
 #new-note-input {
   background: var(--bg-light);
   border-radius: var(--br-full);
@@ -226,7 +245,7 @@ footer {
 }
 
 #new-note-input::placeholder {
-  color: var(--text-more-muted);
+  color: var(--text-muted);
 }
 
 .note-item {
