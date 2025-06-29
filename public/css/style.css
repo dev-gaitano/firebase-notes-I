@@ -17,6 +17,7 @@ ul {
   --bg-light: hsl(246 11% 9%);
   --text: hsl(245 98% 97%);
   --text-muted: hsl(245 10% 71%);
+  --text-more-muted: hsl(245 10% 54%);
   --highlight: hsl(246 6% 41%);
   --border: hsl(246 8% 30%);
   --border-muted: hsl(246 11% 20%);
@@ -109,7 +110,7 @@ header {
 }
 
 main {
-  height: 560px;
+  height: 566px;
   display: flex;
   flex-direction: column;
   gap: var(--margin-lg);
@@ -173,7 +174,7 @@ footer {
 }
 
 .button-primary {
-  background: var(--bg);
+  background: var(--bg-light);
   border-radius: var(--br-full);
   height: 40px;
   width: 40px;
@@ -226,6 +227,7 @@ footer {
   font-size: 8px;
   display: flex;
   justify-content: flex-end;
+  color: var(--text-more-muted);
 }
 
 #note-preview {
