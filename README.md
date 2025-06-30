@@ -1,11 +1,11 @@
-# Firebase Notes
+# Ascend.up
 
 Ascend.up is a clean, minimal notes app built for focus and flow. Write, organize, and revisit your thoughts anytime.
 
 ## Project Structure
 
 ```
-firebase-notes/
+firebase-notes-I/
 ├── extensions/              # Firebase Extensions directory
 ├── functions/               # Cloud Functions directory
 │   ├── node_modules/        # Functions dependencies
