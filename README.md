@@ -80,8 +80,10 @@ In a world filled with cluttered interfaces and overwhelming features, Ascend.up
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
+* HTML5
+* CSS
+* JavaScript
+* Firebase
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
