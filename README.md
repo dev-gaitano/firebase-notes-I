@@ -215,7 +215,7 @@ Distributed under the project_license. See `LICENSE` for more information.
 Eugene Gaitano - [@GaitanoDev](https://x.com/GaitanoDev) - dev.gaitano@gmail.com
 
 Project Link:
-[https://github.com/dev-gaitano/firebase-notes-I](https://github.com/dev-gaitano/firebase-notes-I)
+[Ascend.up](https://ascendup.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
