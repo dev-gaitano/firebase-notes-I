@@ -1,3 +1,57 @@
 node_modules/
 dist/
 build/
+package-lock.json
+
+# =======================
+# Firebase Configuration
+# =======================
+
+# Firebase configuration files with sensitive data
+firebase-config.js
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Firebase debug and log files
+firebase-debug.log
+firebase-debug.*.log
+firestore-debug.log
+
+# Firebase hosting cache
+.firebase/
+
+# Firebase functions deployment
+functions/.runtimeconfig.json
+
+# API keys and secrets
+.secrets
+secrets.json
+.env.secrets
+
+# Private keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Service account keys
+serviceAccountKey.json
+service-account-*.json
+
+# Temporary folders
+tmp/
+temp/
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Vim
+*.swp
+*.swo
+*~
+
