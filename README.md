@@ -30,13 +30,28 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![project_license][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+<div align="center">
 
+  <a href="https://github.com/dev-gaitano/firebase-notes-I/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/dev-gaitano/firebase-notes-I.svg?style=for-the-badge" alt="Contributors">
+  </a>
+  <a href="https://github.com/dev-gaitano/firebase-notes-I/network/members">
+    <img src="https://img.shields.io/github/forks/dev-gaitano/firebase-notes-I.svg?style=for-the-badge" alt="Forks">
+  </a>
+  <a href="https://github.com/dev-gaitano/firebase-notes-I/stargazers">
+    <img src="https://img.shields.io/github/stars/dev-gaitano/firebase-notes-I.svg?style=for-the-badge" alt="Stars">
+  </a>
+  <a href="https://github.com/dev-gaitano/firebase-notes-I/issues">
+    <img src="https://img.shields.io/github/issues/dev-gaitano/firebase-notes-I.svg?style=for-the-badge" alt="Issues">
+  </a>
+  <a href="https://github.com/dev-gaitano/firebase-notes-I/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/dev-gaitano/firebase-notes-I.svg?style=for-the-badge" alt="License">
+  </a>
+  <a href="https://www.linkedin.com/in/eugene-gaitano">
+    <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" alt="LinkedIn">
+  </a>
+
+</div>
 
 
 <!-- TABLE OF CONTENTS -->
