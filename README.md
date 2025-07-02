@@ -1,4 +1,3 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
 
 
@@ -83,8 +82,6 @@ In a world filled with cluttered interfaces and overwhelming features, Ascend.up
 * CSS
 * JavaScript
 * Firebase
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
