@@ -257,6 +257,7 @@ footer {
   gap: var(--margin-sm);
   color: var(--text-muted);
   margin-bottom: var(--margin-m);
+  animation: fadeInRight 0.8s ease-out forwards;
 }
 
 #note-header {
@@ -289,4 +290,120 @@ footer {
 
 #note-title {
   color: var(--text);
+}
+
+.footer-item {
+  animation: fadeInUp 2.0s ease-out forwards;
+}
+
+/* Keyframe animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Staggered animation delays for notes */
+.note-item:nth-child(1) {
+  animation-delay: 0.0s;
+}
+
+.note-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.note-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.note-item:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.note-item:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.note-item:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.note-item:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.note-item:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.note-item:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+.note-item:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+.footer-item:nth-child(1) {
+  animation-delay: 3.0;
+}
+
+.footer-item:nth-child(2) {
+  animation-delay: 3.1;
 }
