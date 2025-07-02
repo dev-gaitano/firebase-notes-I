@@ -227,6 +227,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-delay: 0.3s;
 }
 
 #plus-icon {
@@ -242,6 +243,7 @@ footer {
   display: flex;
   flex-grow: 1;
   padding-left: var(--margin-m);
+  animation-delay: 0.0s;
 }
 
 #new-note-input::placeholder {
@@ -399,12 +401,3 @@ footer {
 .note-item:nth-child(10) {
   animation-delay: 0.9s;
 }
-
-.footer-item:nth-child(1) {
-  animation-delay: 3.0;
-}
-
-.footer-item:nth-child(2) {
-  animation-delay: 3.1;
-}
-
