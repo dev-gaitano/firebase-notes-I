@@ -73,9 +73,7 @@
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 
-In a world filled with cluttered interfaces and overwhelming features, Ascend.up takes a different approach. We believe that great ideas deserve a beautiful, uncluttered space to grow. Our mission is to create a notes app that gets out of your way and lets your creativity shine.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+In a world filled with cluttered interfaces and overwhelming features, Ascend.up takes a different approach.
 
 
 
