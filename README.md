@@ -218,7 +218,7 @@ Distributed under the MIT license. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Eugene Gaitano - [@GaitanoDev](https://x.com/GaitanoDev) - dev.gaitano@gmail.com
+Eugene Gaitano - dev.gaitano@gmail.com
 
 Project Link:
 [Ascend.up](https://ascendup.netlify.app/)
