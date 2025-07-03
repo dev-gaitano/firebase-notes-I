@@ -3,10 +3,6 @@ dist/
 build/
 package-lock.json
 
-# =======================
-# Firebase Configuration
-# =======================
-
 # Firebase configuration files with sensitive data
 firebase-config.js
 .env
