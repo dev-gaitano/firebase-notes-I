@@ -117,7 +117,7 @@ firebase-notes-I/
 ├── .firebaserc             # Firebase project configuration
 ├── .git/                   # Git repository data
 ├── .gitignore              # Git ignore rules
-├── LICENSE.md              # Project license
+├── LICENSE                 # Project license
 ├── README.md               # Project documentation
 ├── database.rules.json     # Realtime Database security rules
 ├── firebase.json           # Firebase configuration file
