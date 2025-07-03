@@ -99,9 +99,9 @@ In a world filled with cluttered interfaces and overwhelming features, Ascend.up
 
 ```
 firebase-notes-I/
-├── extensions/              # Firebase Extensions directory
-├── functions/               # Cloud Functions directory
-│   ├── node_modules/        # Functions dependencies
+├── extensions/             # Firebase Extensions directory
+├── functions/              # Cloud Functions directory
+│   ├── node_modules/       # Functions dependencies
 │   ├── .eslintrc.js        # Functions linting configuration
 │   ├── index.js            # Main functions code
 │   ├── package.json        # Functions package configuration
@@ -111,7 +111,8 @@ firebase-notes-I/
 │   ├── css/                # Stylesheets
 │   │   └── style.css       # Main stylesheet
 │   ├── js/                 # Client-side JavaScript
-│   │   └── app.js          # Main application logic   └── index.html          # Main HTML file
+│   │   └── app.js          # Main application logic
+│   └── index.html          # Main HTML file
 ├── .git/                   # Git repository data
 ├── .gitignore              # Git ignore rules
 ├── LICENSE                 # Project license
