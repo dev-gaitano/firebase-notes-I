@@ -111,16 +111,12 @@ firebase-notes-I/
 │   ├── css/                # Stylesheets
 │   │   └── style.css       # Main stylesheet
 │   ├── js/                 # Client-side JavaScript
-│   │   ├── app.js          # Main application logic
-│   │   └── firebase-config.js # Firebase initialization
-│   └── index.html          # Main HTML file
-├── .firebaserc             # Firebase project configuration
+│   │   └── app.js          # Main application logic   └── index.html          # Main HTML file
 ├── .git/                   # Git repository data
 ├── .gitignore              # Git ignore rules
 ├── LICENSE                 # Project license
 ├── README.md               # Project documentation
 ├── database.rules.json     # Realtime Database security rules
-├── firebase.json           # Firebase configuration file
 ├── firestore.indexes.json  # Firestore index definitions
 ├── firestore.rules         # Firestore security rules
 ├── node_modules/           # Root project dependencies

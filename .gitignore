@@ -4,7 +4,14 @@ build/
 package-lock.json
 
 # Firebase configuration files with sensitive data
-firebase-config.js
+public/js/firebase-config.js
+# Firebase sensitive files
+public/js/firebase-config.js
+.firebaserc
+firebase.json
+
+# Node environment variables (used in functions/)
+functions/.env
 .env
 .env.local
 .env.development.local
