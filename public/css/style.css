@@ -207,13 +207,7 @@ footer {
   align-items: center;
 }
 
-#sort-icon {
-  width: 20px;
-  height: 20px;
-  color: var(--text-more-muted);
-}
-
-#light-theme-icon {
+.icon-primary {
   width: 20px;
   height: 20px;
   color: var(--text-more-muted);
