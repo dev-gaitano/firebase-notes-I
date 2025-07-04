@@ -238,10 +238,22 @@ footer {
   flex-grow: 1;
   padding-left: var(--margin-m);
   animation-delay: 0.0s;
+  position: relative;
 }
 
 #new-note-input::placeholder {
   color: var(--text-muted);
+}
+
+#new-note-input::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: red;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 .note-item {
