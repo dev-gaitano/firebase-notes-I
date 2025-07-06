@@ -238,6 +238,7 @@ footer {
   flex-grow: 1;
   padding-left: var(--margin-m);
   animation-delay: 0.0s;
+  color: var(--text);
 }
 
 #new-note-input::placeholder {
