@@ -191,6 +191,7 @@ footer {
   background: transparent;
   border: none;
   height: 40px;
+  color: var(--text-muted);
 }
 
 #search-bar::placeholder {
@@ -211,6 +212,13 @@ footer {
   width: 20px;
   height: 20px;
   color: var(--text-more-muted);
+}
+
+#delete-button {
+  width: 16px;
+  height: 16px;
+  color: var(--text-more-muted);
+  background: none;
 }
 
 #new-note-button {

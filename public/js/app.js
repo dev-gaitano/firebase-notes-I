@@ -90,16 +90,29 @@ const getNotes = async () => {
 
     // Create note element
     const noteEl = document.createElement("li");
+    noteEl.addEventListener("click", () => {
+      editNotePrompt(noteId, noteData.title, fullText);
+    });
     noteEl.className = "note-item";
     noteEl.innerHTML = `
       <div id="note-header">
-        <h2 id="note-title" class="montserrat-semi-bold">The First Note</h2>
-        <p class="montserrat-semi-bold">⋯</p>
+        <h2 id="note-title" class="montserrat-semi-bold">${noteData.title}</h2>
+        <button id="delete-button" onclick="deleteNote('${noteId}')"> 
+          <svg xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2">
+
+            <path d="M3 6h18"/>
+            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
+            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+
+            <line x1="10" x2="10" y1="11" y2="17"/>
+            <line x1="14" x2="14" y1="11" y2="17"/>
+          </svg>
+        </button>
       </div>
       <p id="note-preview" class="montserrat-regular">${preview}</p>
       <p id="last-edited" class="montserrat-regular">${formattedDate}</p>
-      <!-- <button onclick="deleteNote('${noteId}')">Delete</button>
-      <button onclick="editNotePrompt('${noteId}', \`${fullText}\`)">Edit</button> -->
+      <!-- <button onclick="editNotePrompt('${noteId}', \`${fullText}\`)">Edit</button> -->
     `;
 
     notesContainer.appendChild(noteEl);
