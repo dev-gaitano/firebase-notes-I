@@ -64,6 +64,7 @@ const saveEditBtn = document.getElementById("save-edit");
 const cancelEditBtn = document.getElementById("cancel-edit");
 
 let currentEditNoteId = null;
+let creatingNewNote = false;
 
 // Create a note
 const addNote = async (noteText) => {
@@ -152,8 +153,19 @@ const updateNote = async (id, newText) => {
 
 // Add button event
 newNoteButton.addEventListener("click", () => {
-  addNote(newNoteInput.value);
-  newNoteInput.value = "";
+  const noteText = newNoteInput.value.trim()
+  
+  if (noteText) {
+    addNote(newNoteInput.value);
+    newNoteInput.value = "";
+  } else {
+    // Show edit modal in "new note" mode
+    creatingNewNote = true;
+    currentEditNoteId = null;
+    editTitleInput.value = "";
+    editTextInput.value = "";
+    editModal.classList.remove("hidden");
+  }
 });
 
 // Edit Note Modal Buttons event
@@ -162,11 +174,21 @@ saveEditBtn.addEventListener("click", async () => {
   const newText = editTextInput.value.trim();
   if (!newText) return;
 
-  await updateDoc(doc(db, "notes", currentEditNoteId), {
-    title: newTitle,
-    text: newText,
-    timestamp: Date.now()
-  });
+  if (creatingNewNote) {
+    await addDoc(notesCol, {
+      title: newTitle,
+      text: newText,
+      timestamp: Date.now()
+    });
+    creatingNewNote = false;
+  } else {
+    await updateDoc(doc(db, "notes", currentEditNoteId), {
+        title: newTitle,
+        text: newText,
+        timestamp: Date.now()
+      }
+    );
+  };
 
   editModal.classList.add("hidden");
   getNotes();
