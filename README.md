@@ -168,7 +168,7 @@ npx serve public
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Add/edit Notes
+- [ x ] Add/edit Notes
 - [ ] Filter & Sort Notes
 - [ ] Search Functionality
 - [ ] Firebase Implementation
