@@ -53,18 +53,23 @@ hiddenElements.forEach((element) => {
 // Reference to the Firestore collection
 const notesCol = collection(db, "notes");
 
-// DOM elements using IDs (not classes)
-const newNoteTitle = document.getElementById("new-note-title");
+// DOM elements using IDs
 const newNoteInput = document.getElementById("new-note-input");
 const newNoteButton = document.getElementById("new-note-button");
 const notesContainer = document.getElementById("notes-list");
+const editModal = document.getElementById("edit-modal");
+const editTitleInput = document.getElementById("edit-title");
+const editTextInput = document.getElementById("edit-text");
+const saveEditBtn = document.getElementById("save-edit");
+const cancelEditBtn = document.getElementById("cancel-edit");
+
+let currentEditNoteId = null;
 
 // Create a note
-const addNote = async (noteText, noteTitle) => {
-  const title = noteTitle.trim() || "Untitled";
+const addNote = async (noteText) => {
   if (!noteText.trim()) return;
   await addDoc(notesCol, {
-    title,
+    title: "Untitled",
     text: noteText,
     timestamp: Date.now()
   });
@@ -81,8 +86,8 @@ const getNotes = async () => {
     const noteId = docSnap.id;
 
     const fullText = noteData.text;
-    const preview = fullText.length > 60
-      ? fullText.slice(0, 60) + "..."
+    const preview = fullText.length > 50
+      ? fullText.slice(0, 50) + "..."
       : fullText;
 
     // Format timestamp
@@ -130,11 +135,10 @@ window.deleteNote = async (id) => {
 
 // Prompt to edit a note
 window.editNotePrompt = (id, oldTitle, oldText) => {
-  const newTitle = prompt("Edit title:", oldTitle) || "Untitled";
-  const newText = prompt("Edit note:", oldText);
-  if (newText && newText.trim()) {
-    updateNote(id, newTitle.trim(), newText.trim());
-  }
+  currentEditNoteId = id;
+  editTitleInput.value = oldTitle;
+  editTextInput.value = oldText;
+  editModal.classList.remove("hidden");
 };
 
 // Update a note
@@ -150,9 +154,34 @@ const updateNote = async (id, newText) => {
 newNoteButton.addEventListener("click", () => {
   addNote(newNoteInput.value);
   newNoteInput.value = "";
-  newNoteTitle.value = "";
+});
+
+// Edit Note Modal Buttons event
+saveEditBtn.addEventListener("click", async () => {
+  const newTitle = editTitleInput.value.trim() || "Untitled";
+  const newText = editTextInput.value.trim();
+  if (!newText) return;
+
+  await updateDoc(doc(db, "notes", currentEditNoteId), {
+    title: newTitle,
+    text: newText,
+    timestamp: Date.now()
+  });
+
+  editModal.classList.add("hidden");
+  getNotes();
+});
+
+cancelEditBtn.addEventListener("click", () => {
+  editModal.classList.add("hidden");
+});
+
+// Click outside to exit Modal
+window.addEventListener("click", (e) => {
+  if (e.target === editModal) {
+    editModal.classList.add("hidden");
+  }
 });
 
 // Load notes on page load
 getNotes();
-

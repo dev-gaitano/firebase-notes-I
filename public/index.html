@@ -88,6 +88,19 @@
     </button>
     <input id="new-note-input" class="footer-item" placeholder="Start typing...">
   </footer>
+  
+<!-- Edit Note Modal -->
+<div id="edit-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2 class="montserrat-semi-bold">Edit Note</h2>
+    <input id="edit-title" class="montserrat-semi-bold" type="text" placeholder="Title" />
+    <textarea id="edit-text" class="montserrat-regular" rows="20" placeholder="Note..."></textarea>
+    <div class="modal-actions">
+      <button id="save-edit" class="save-btn">Save</button>
+      <button id="cancel-edit" class="cancel-btn">Cancel</button>
+    </div>
+  </div>
+</div>
 
   <script src="./js/firebase-config.js" type="module" defer></script>
   <script src="./js/app.js" type="module" defer></script>
