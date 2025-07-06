@@ -44,7 +44,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 })
 
-const hiddenElements = document.getElementsByClassName('hidden')
+const hiddenElements = document.querySelectorAll('hidden')
 hiddenElements.forEach((element) => {
   observer.observe(element)
 });
@@ -53,12 +53,12 @@ hiddenElements.forEach((element) => {
 // Reference to the Firestore collection
 const notesCol = collection(db, "notes");
 
-// ✅ DOM elements using IDs (not classes)
+// DOM elements using IDs (not classes)
 const newNoteInput = document.getElementById("new-note-input");
 const newNoteButton = document.getElementById("new-note-button");
 const notesContainer = document.getElementById("notes-list");
 
-// ✅ Create a note
+// Create a note
 const addNote = async (noteText) => {
   if (!noteText.trim()) return;
   await addDoc(notesCol, {
@@ -68,7 +68,7 @@ const addNote = async (noteText) => {
   getNotes(); // Refresh notes after adding
 };
 
-// ✅ Read and render notes
+// Read and render notes
 const getNotes = async () => {
   notesContainer.innerHTML = ""; // Clear existing notes
 
@@ -98,21 +98,21 @@ const getNotes = async () => {
       </div>
       <p id="note-preview" class="montserrat-regular">${preview}</p>
       <p id="last-edited" class="montserrat-regular">${formattedDate}</p>
-      <button onclick="deleteNote('${noteId}')">Delete</button>
-      <button onclick="editNotePrompt('${noteId}', \`${fullText}\`)">Edit</button>
+      <!-- <button onclick="deleteNote('${noteId}')">Delete</button>
+      <button onclick="editNotePrompt('${noteId}', \`${fullText}\`)">Edit</button> -->
     `;
 
     notesContainer.appendChild(noteEl);
   });
 };
 
-// ✅ Delete a note
+// Delete a note
 window.deleteNote = async (id) => {
   await deleteDoc(doc(db, "notes", id));
   getNotes();
 };
 
-// ✅ Prompt to edit a note
+// Prompt to edit a note
 window.editNotePrompt = (id, oldText) => {
   const newText = prompt("Edit your note:", oldText);
   if (newText && newText.trim()) {
@@ -120,7 +120,7 @@ window.editNotePrompt = (id, oldText) => {
   }
 };
 
-// ✅ Update a note
+// Update a note
 const updateNote = async (id, newText) => {
   await updateDoc(doc(db, "notes", id), {
     text: newText,
@@ -129,11 +129,12 @@ const updateNote = async (id, newText) => {
   getNotes();
 };
 
-// ✅ Add button event
+// Add button event
 newNoteButton.addEventListener("click", () => {
   addNote(newNoteInput.value);
   newNoteInput.value = "";
 });
 
-// ✅ Load notes on page load
+// Load notes on page load
 getNotes();
+
