@@ -54,14 +54,17 @@ hiddenElements.forEach((element) => {
 const notesCol = collection(db, "notes");
 
 // DOM elements using IDs (not classes)
+const newNoteTitle = document.getElementById("new-note-title");
 const newNoteInput = document.getElementById("new-note-input");
 const newNoteButton = document.getElementById("new-note-button");
 const notesContainer = document.getElementById("notes-list");
 
 // Create a note
-const addNote = async (noteText) => {
+const addNote = async (noteText, noteTitle) => {
+  const title = noteTitle.trim() || "Untitled";
   if (!noteText.trim()) return;
   await addDoc(notesCol, {
+    title,
     text: noteText,
     timestamp: Date.now()
   });
@@ -126,10 +129,11 @@ window.deleteNote = async (id) => {
 };
 
 // Prompt to edit a note
-window.editNotePrompt = (id, oldText) => {
-  const newText = prompt("Edit your note:", oldText);
+window.editNotePrompt = (id, oldTitle, oldText) => {
+  const newTitle = prompt("Edit title:", oldTitle) || "Untitled";
+  const newText = prompt("Edit note:", oldText);
   if (newText && newText.trim()) {
-    updateNote(id, newText);
+    updateNote(id, newTitle.trim(), newText.trim());
   }
 };
 
@@ -146,6 +150,7 @@ const updateNote = async (id, newText) => {
 newNoteButton.addEventListener("click", () => {
   addNote(newNoteInput.value);
   newNoteInput.value = "";
+  newNoteTitle.value = "";
 });
 
 // Load notes on page load
