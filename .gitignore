@@ -3,10 +3,7 @@ dist/
 build/
 package-lock.json
 
-# Firebase configuration files with sensitive data
-public/js/firebase-config.js
 # Firebase sensitive files
-public/js/firebase-config.js
 .firebaserc
 firebase.json
 
