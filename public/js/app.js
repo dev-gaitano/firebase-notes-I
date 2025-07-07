@@ -103,7 +103,7 @@ hiddenElements.forEach((element) => {
 });
 
 
-// Reference to the Firestore collection
+// CRUD Application
 const notesCol = collection(db, "notes");
 
 // DOM elements using IDs
@@ -174,7 +174,6 @@ const getNotes = async () => {
       </div>
       <p id="note-preview" class="montserrat-regular">${preview}</p>
       <p id="last-edited" class="montserrat-regular">${formattedDate}</p>
-      <!-- <button onclick="editNotePrompt('${noteId}', \`${fullText}\`)">Edit</button> -->
     `;
 
     notesContainer.appendChild(noteEl);
@@ -207,7 +206,7 @@ const updateNote = async (id, newText) => {
 // Add button event
 newNoteButton.addEventListener("click", () => {
   const noteText = newNoteInput.value.trim()
-  
+
   if (noteText) {
     addNote(newNoteInput.value);
     newNoteInput.value = "";
@@ -236,10 +235,10 @@ saveEditBtn.addEventListener("click", async () => {
     creatingNewNote = false;
   } else {
     await updateDoc(doc(db, "notes", currentEditNoteId), {
-        title: newTitle,
-        text: newText,
-        timestamp: Date.now()
-      }
+      title: newTitle,
+      text: newText,
+      timestamp: Date.now()
+    }
     );
   };
 
@@ -260,3 +259,4 @@ window.addEventListener("click", (e) => {
 
 // Load notes on page load
 getNotes();
+

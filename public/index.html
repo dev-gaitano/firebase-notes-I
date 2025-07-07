@@ -7,8 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="title" content="ascend.up | Elevate your thoughts">
-  <meta name="description"
-    content="Write, organize, and revisit your thoughts anytime.">
+  <meta name="description" content="Write, organize, and revisit your thoughts anytime.">
   <meta name="keywords" content="ascend.up, notes app, minimalist notes, online notepad, productivity tool">
   <meta name="author" content="Eugene Gaitano">
 
@@ -57,7 +56,8 @@
         </svg>
       </button>
       <button id="theme-button" class="button-primary">
-        <svg id="light-theme-icon" class="icon-primary" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id="light-theme-icon" class="icon-primary" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <!-- Sun rays -->
           <path d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           <path d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -90,19 +90,19 @@
     </button>
     <input id="new-note-input" class="footer-item" placeholder="Start typing...">
   </footer>
-  
-<!-- Edit Note Modal -->
-<div id="edit-modal" class="modal hidden">
-  <div class="modal-content">
-    <h2 class="montserrat-semi-bold">Edit Note</h2>
-    <input id="edit-title" class="montserrat-semi-bold" type="text" placeholder="Title" />
-    <textarea id="edit-text" class="montserrat-regular" rows="20" placeholder="Note..."></textarea>
-    <div class="modal-actions">
-      <button id="save-edit" class="save-btn">Save</button>
-      <button id="cancel-edit" class="cancel-btn">Cancel</button>
+
+  <!-- Edit Note Modal -->
+  <div id="edit-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 class="montserrat-semi-bold">Edit Note</h2>
+      <input id="edit-title" class="montserrat-semi-bold" type="text" placeholder="Title" />
+      <textarea id="edit-text" class="montserrat-regular" rows="20" placeholder="Note..."></textarea>
+      <div class="modal-actions">
+        <button id="save-edit" class="save-btn">Save</button>
+        <button id="cancel-edit" class="cancel-btn">Cancel</button>
+      </div>
     </div>
   </div>
-</div>
 
   <script src="./js/firebase-config.js" type="module" defer></script>
   <script src="./js/app.js" type="module" defer></script>
