@@ -1,5 +1,5 @@
 import { db } from "./firebase-config.js";
-import { collection, addDoc, getDocs, deleteDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { collection, addDoc, getDocs, deleteDoc, doc, updateDoc, query, orderBy } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 // Theme Toggle
 const themeButton = document.getElementById('theme-button');
@@ -134,7 +134,7 @@ const addNote = async (noteText) => {
 const getNotes = async () => {
   notesContainer.innerHTML = ""; // Clear existing notes
 
-  const snapshot = await getDocs(notesCol);
+  const snapshot = await getDocs(query(notesCol, orderBy("timestamp", "desc")));
   snapshot.forEach(docSnap => {
     const noteData = docSnap.data();
     const noteId = docSnap.id;
