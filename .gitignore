@@ -3,10 +3,6 @@ dist/
 build/
 package-lock.json
 
-# Firebase sensitive files
-.firebaserc
-firebase.json
-
 # Node environment variables (used in functions/)
 functions/.env
 .env
