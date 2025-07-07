@@ -1,0 +1,23 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBFVC7zrFJaW16lUjIVJ0Q-SSLb5ae_QZA",
+  authDomain: "fir-notes-1848c.firebaseapp.com",
+  databaseURL: "https://fir-notes-1848c-default-rtdb.firebaseio.com",
+  projectId: "fir-notes-1848c",
+  storageBucket: "fir-notes-1848c.firebasestorage.app",
+  messagingSenderId: "981098571476",
+  appId: "1:981098571476:web:4bbe7f4c54d9385003bd41",
+  measurementId: "G-B6PP45Y26G"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app)
