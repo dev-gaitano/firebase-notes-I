@@ -98,6 +98,42 @@ body {
   justify-content: flex-start;
   gap: var(--margin-lg);
   padding: var(--margin-lg);
+  position: relative;
+}
+
+.stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle 4s infinite ease-in-out;
+}
+
+.star.small {
+  width: 1px;
+  height: 1px;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.star.medium {
+  width: 1.5px;
+  height: 1.5px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.star.large {
+  width: 2px;
+  height: 2px;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
 }
 
 header {
@@ -360,6 +396,20 @@ footer {
 }
 
 /* Keyframe animations */
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
