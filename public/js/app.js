@@ -145,11 +145,6 @@ const getNotes = async () => {
       : fullText;
 
     // Format timestamp
-    // const date = new Date(noteData.timestamp);
-    // const formattedDate = date.toLocaleDateString("en-US", {
-    //  weekday: "short", month: "short", day: "numeric"
-    // });
-
     function formatDate(timestamp) {
       const now = new Date()
       const then = new Date(timestamp)
