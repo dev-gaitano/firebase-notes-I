@@ -145,10 +145,37 @@ const getNotes = async () => {
       : fullText;
 
     // Format timestamp
-    const date = new Date(noteData.timestamp);
-    const formattedDate = date.toLocaleDateString("en-US", {
-      weekday: "short", month: "short", day: "numeric"
-    });
+    // const date = new Date(noteData.timestamp);
+    // const formattedDate = date.toLocaleDateString("en-US", {
+    //  weekday: "short", month: "short", day: "numeric"
+    // });
+
+    function formatDate(timestamp) {
+      const now = new Date()
+      const then = new Date(timestamp)
+      const diffInMs = now - then
+
+      const seconds = Math.floor(diffInMs / 1000)
+      const minutes = Math.floor(diffInMs / (1000 * 60))
+      const hours = Math.floor(diffInMs / (1000 * 60 * 60))
+      const days = Math.floor(diffInMs / (1000 * 60 * 60 * 24))
+      const weeks = Math.floor(days / 7)
+      
+      if (seconds < 60) {
+        return "~1 minute ago"
+      } else if (minutes < 60) {
+        return `${minutes} minute${minutes !== 1 ? "s" : ""} ago`
+      } else if (hours < 24) {
+        return `${hours} hour${hours !== 1 ? "s" : ""} ago`    
+      } else if (days < 7) {
+        return `${days} day${days !== 1 ? "s" : ""} ago`
+      } else {
+        return `${weeks} week${weeks !== 1 ? "s" : ""} ago`
+      }
+
+    }
+
+    const formattedDate = formatDate(noteData.timestamp)
 
     // Create note element
     const noteEl = document.createElement("li");
