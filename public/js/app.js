@@ -1,18 +1,33 @@
 import { db } from "./firebase-config.js";
-import { collection, addDoc, getDocs, deleteDoc, doc, updateDoc, query, orderBy } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import {
+  collection,
+  addDoc,
+  getDocs,
+  deleteDoc,
+  doc,
+  updateDoc,
+  query,
+  orderBy,
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 // Theme Toggle
-const themeButton = document.getElementById('theme-button');
+const themeButton = document.getElementById("theme-button");
 const body = document.body;
-const lightThemeIcon = document.getElementById('light-theme-icon')
-const darkThemeIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+const lightThemeIcon = document.getElementById("light-theme-icon");
+const darkThemeIcon = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "svg",
+);
 darkThemeIcon.setAttribute("id", "dark-theme-icon");
 darkThemeIcon.setAttribute("class", "icon-primary");
 darkThemeIcon.setAttribute("viewBox", "0 0 24 24");
 darkThemeIcon.setAttribute("fill", "none");
 
 const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-path.setAttribute("d", "M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z");
+path.setAttribute(
+  "d",
+  "M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z",
+);
 path.setAttribute("fill", "none");
 path.setAttribute("stroke", "currentColor");
 path.setAttribute("stroke-width", "2");
@@ -21,8 +36,8 @@ path.setAttribute("stroke-linejoin", "round");
 
 darkThemeIcon.appendChild(path);
 
-themeButton.addEventListener('click', () => {
-  const isLight = body.classList.toggle('light');
+themeButton.addEventListener("click", function () {
+  const isLight = body.classList.toggle("light");
 
   if (isLight) {
     lightThemeIcon.replaceWith(darkThemeIcon);
@@ -31,30 +46,29 @@ themeButton.addEventListener('click', () => {
   }
 });
 
-
 // Create stars
 function createStars() {
-  const container = document.getElementById('starsContainer');
+  const container = document.getElementById("starsContainer");
   const numberOfStars = 150;
 
   for (let i = 0; i < numberOfStars; i++) {
-    const star = document.createElement('div');
-    star.className = 'star';
+    const star = document.createElement("div");
+    star.className = "star";
 
     // Random size
-    const sizes = ['small', 'medium', 'large'];
+    const sizes = ["small", "medium", "large"];
     const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
     star.classList.add(randomSize);
 
     // Random position
-    star.style.left = Math.random() * 100 + '%';
-    star.style.top = Math.random() * 100 + '%';
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
 
     // Random animation delay
-    star.style.animationDelay = Math.random() * 3 + 's';
+    star.style.animationDelay = Math.random() * 3 + "s";
 
     // Random animation duration for variation (slower)
-    star.style.animationDuration = (3 + Math.random() * 4) + 's';
+    star.style.animationDuration = 3 + Math.random() * 4 + "s";
 
     container.appendChild(star);
   }
@@ -64,26 +78,26 @@ function createStars() {
 createStars();
 
 // Add some sparkle effect on mouse move
-document.addEventListener('mousemove', (e) => {
-  if (Math.random() > 0.95) { // Only occasionally
-    const sparkle = document.createElement('div');
-    sparkle.className = 'star small';
-    sparkle.style.left = e.clientX + 'px';
-    sparkle.style.top = e.clientY + 'px';
-    sparkle.style.position = 'fixed';
-    sparkle.style.pointerEvents = 'none';
-    sparkle.style.animation = 'twinkle 0.6s ease-out forwards';
+document.addEventListener("mousemove", function (e) {
+  if (Math.random() > 0.95) {
+    // Only occasionally
+    const sparkle = document.createElement("div");
+    sparkle.className = "star small";
+    sparkle.style.left = e.clientX + "px";
+    sparkle.style.top = e.clientY + "px";
+    sparkle.style.position = "fixed";
+    sparkle.style.pointerEvents = "none";
+    sparkle.style.animation = "twinkle 0.6s ease-out forwards";
 
     document.body.appendChild(sparkle);
 
-    setTimeout(() => {
+    setTimeout(function () {
       if (sparkle.parentNode) {
         sparkle.parentNode.removeChild(sparkle);
       }
     }, 600);
   }
 });
-
 
 // CRUD Applications
 const notesCol = collection(db, "notes");
@@ -102,61 +116,59 @@ let currentEditNoteId = null;
 let creatingNewNote = false;
 
 // Create a note
-const addNote = async (noteText) => {
+async function addNote(noteText) {
   if (!noteText.trim()) return;
   await addDoc(notesCol, {
     title: "Untitled",
     text: noteText,
-    timestamp: Date.now()
+    timestamp: Date.now(),
   });
   getNotes(); // Refresh notes after adding
-};
+}
 
 // Read and render notes
-const getNotes = async () => {
+async function getNotes() {
   notesContainer.innerHTML = ""; // Clear existing notes
 
   const snapshot = await getDocs(query(notesCol, orderBy("timestamp", "desc")));
-  snapshot.forEach(docSnap => {
+  snapshot.forEach(function (docSnap) {
     const noteData = docSnap.data();
     const noteId = docSnap.id;
 
     const fullText = noteData.text;
-    const preview = fullText.length > 50
-      ? fullText.slice(0, 50) + "..."
-      : fullText;
+    const preview =
+      fullText.length > 50 ? fullText.slice(0, 50) + "..." : fullText;
 
     // Format timestamp
     function formatDate(timestamp) {
-      const now = new Date()
-      const then = new Date(timestamp)
-      const diffInMs = now - then
+      const now = new Date();
+      const then = new Date(timestamp);
+      const diffInMs = now - then;
 
-      const seconds = Math.floor(diffInMs / 1000)
-      const minutes = Math.floor(diffInMs / (1000 * 60))
-      const hours = Math.floor(diffInMs / (1000 * 60 * 60))
-      const days = Math.floor(diffInMs / (1000 * 60 * 60 * 24))
-      const weeks = Math.floor(days / 7)
-      
+      const seconds = Math.floor(diffInMs / 1000);
+      const minutes = Math.floor(diffInMs / (1000 * 60));
+      const hours = Math.floor(diffInMs / (1000 * 60 * 60));
+      const days = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+      const weeks = Math.floor(days / 7);
+
       if (seconds < 60) {
-        return "~1 minute ago"
+        return "~1 minute ago";
       } else if (minutes < 60) {
-        return `${minutes} minute${minutes !== 1 ? "s" : ""} ago`
+        return `${minutes} minute${minutes !== 1 ? "s" : ""} ago`;
       } else if (hours < 24) {
-        return `${hours} hour${hours !== 1 ? "s" : ""} ago`    
+        return `${hours} hour${hours !== 1 ? "s" : ""} ago`;
       } else if (days < 7) {
-        return `${days} day${days !== 1 ? "s" : ""} ago`
+        return `${days} day${days !== 1 ? "s" : ""} ago`;
       } else {
-        return `${weeks} week${weeks !== 1 ? "s" : ""} ago`
+        return `${weeks} week${weeks !== 1 ? "s" : ""} ago`;
       }
-
     }
 
-    const formattedDate = formatDate(noteData.timestamp)
+    const formattedDate = formatDate(noteData.timestamp);
 
     // Create note element
     const noteEl = document.createElement("li");
-    noteEl.addEventListener("click", () => {
+    noteEl.addEventListener("click", function () {
       editNotePrompt(noteId, noteData.title, fullText);
     });
     noteEl.className = "note-item";
@@ -182,16 +194,16 @@ const getNotes = async () => {
 
     notesContainer.appendChild(noteEl);
   });
-};
+}
 
 // Delete a note
-window.deleteNote = async (id) => {
+window.deleteNote = async function (id) {
   await deleteDoc(doc(db, "notes", id));
   getNotes();
 };
 
 // Prompt to edit a note
-window.editNotePrompt = (id, oldTitle, oldText) => {
+window.editNotePrompt = function (id, oldTitle, oldText) {
   currentEditNoteId = id;
   editTitleInput.value = oldTitle;
   editTextInput.value = oldText;
@@ -199,17 +211,17 @@ window.editNotePrompt = (id, oldTitle, oldText) => {
 };
 
 // Update a note
-const updateNote = async (id, newText) => {
+async function updateNote(id, newText) {
   await updateDoc(doc(db, "notes", id), {
     text: newText,
-    timestamp: Date.now()
+    timestamp: Date.now(),
   });
   getNotes();
-};
+}
 
 // Add button event
-newNoteButton.addEventListener("click", () => {
-  const noteText = newNoteInput.value.trim()
+newNoteButton.addEventListener("click", function () {
+  const noteText = newNoteInput.value.trim();
 
   if (noteText) {
     addNote(newNoteInput.value);
@@ -225,7 +237,7 @@ newNoteButton.addEventListener("click", () => {
 });
 
 // Edit Note Modal Buttons event
-saveEditBtn.addEventListener("click", async () => {
+saveEditBtn.addEventListener("click", async function () {
   const newTitle = editTitleInput.value.trim() || "Untitled";
   const newText = editTextInput.value.trim();
   if (!newText) return;
@@ -234,28 +246,27 @@ saveEditBtn.addEventListener("click", async () => {
     await addDoc(notesCol, {
       title: newTitle,
       text: newText,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     });
     creatingNewNote = false;
   } else {
     await updateDoc(doc(db, "notes", currentEditNoteId), {
       title: newTitle,
       text: newText,
-      timestamp: Date.now()
-    }
-    );
-  };
+      timestamp: Date.now(),
+    });
+  }
 
   editModal.classList.add("hidden");
   getNotes();
 });
 
-cancelEditBtn.addEventListener("click", () => {
+cancelEditBtn.addEventListener("click", function () {
   editModal.classList.add("hidden");
 });
 
 // Click outside to exit Modal
-window.addEventListener("click", (e) => {
+window.addEventListener("click", function (e) {
   if (e.target === editModal) {
     editModal.classList.add("hidden");
   }
@@ -263,4 +274,3 @@ window.addEventListener("click", (e) => {
 
 // Load notes on page load
 getNotes();
-
