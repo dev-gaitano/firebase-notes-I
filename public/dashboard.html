@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ascend.up | Elevate your thoughts</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="ascend.up | Elevate your thoughts">
+  <meta name="description" content="Write, organize, and revisit your thoughts anytime.">
+  <meta name="keywords" content="ascend.up, notes app, minimalist notes, online notepad, productivity tool">
+  <meta name="author" content="Eugene Gaitano">
+
+  <link href="./css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./media/ascend-logo.png">
+</head>
+
+<body>
+  <div class="stars-container" id="starsContainer"></div>
+
+  <header>
+    <div id="brand">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-feather-icon lucide-feather">
+        <path
+          d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z" />
+        <path d="M16 8 2 22" />
+        <path d="M17.5 15H9" />
+      </svg>
+      <h1 class="sulphur-point-bold">ascend.</h1>
+    </div>
+    <div id="container-user">
+      <img src="https://miro.medium.com/v2/resize:fit:1080/1*jWx9suY2k3Ifq4B8A_vz9g.jpeg" alt="img">
+    </div>
+  </header>
+  <main>
+    <div id="container-options">
+      <div id="container-search">
+        <svg id="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input id="search-bar" placeholder="Search notes">
+      </div>
+      <button id="sort-button" class="button-primary">
+        <svg id="sort-icon" class="icon-primary" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Long line -->
+          <line x1="2" y1="6" x2="22" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+
+          <!-- Medium line -->
+          <line x1="6" y1="12" x2="18" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+
+          <!-- Short line -->
+          <line x1="10" y1="18" x2="14" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <button id="theme-button" class="button-primary">
+        <svg id="light-theme-icon" class="icon-primary" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <!-- Sun rays -->
+          <path d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+
+          <!-- Sun center circle -->
+          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none" />
+        </svg>
+      </button>
+    </div>
+    <ul id="notes-list">
+
+    </ul>
+  </main>
+  <footer>
+    <button id="new-note-button" class="footer-item">
+      <svg id="plus-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+        style="font-size: 32px; font-family: 'Material Symbols Outlined'; font-style: normal; font-weight: 400; font-display: block; line-height: 1; white-space: nowrap; direction: ltr; color: var(--text-muted);">
+        <!-- Horizontal line -->
+        <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+
+        <!-- Vertical line -->
+        <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <input id="new-note-input" class="footer-item" placeholder="Start typing...">
+  </footer>
+
+  <!-- Edit Note Modal -->
+  <div id="edit-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 class="montserrat-semi-bold">Quick Edit</h2>
+      <input id="edit-title" class="montserrat-semi-bold" type="text" placeholder="Title" />
+      <textarea id="edit-text" class="montserrat-regular" rows="20" placeholder="Note..."></textarea>
+      <div class="modal-actions">
+        <button id="save-edit" class="save-btn">Save</button>
+        <button id="cancel-edit" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/firebase-config.js" type="module" defer></script>
+  <script src="./js/app.js" type="module" defer></script>
+</body>
+
+</html>
