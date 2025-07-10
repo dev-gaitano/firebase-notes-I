@@ -210,15 +210,6 @@ window.editNotePrompt = function (id, oldTitle, oldText) {
   editModal.classList.remove("hidden");
 };
 
-// Update a note
-async function updateNote(id, newText) {
-  await updateDoc(doc(db, "notes", id), {
-    text: newText,
-    timestamp: Date.now(),
-  });
-  getNotes();
-}
-
 // Add button event
 newNoteButton.addEventListener("click", function () {
   const noteText = newNoteInput.value.trim();
