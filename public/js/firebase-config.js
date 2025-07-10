@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -15,9 +16,10 @@ const firebaseConfig = {
   storageBucket: "fir-notes-1848c.firebasestorage.app",
   messagingSenderId: "981098571476",
   appId: "1:981098571476:web:4bbe7f4c54d9385003bd41",
-  measurementId: "G-B6PP45Y26G"
+  measurementId: "G-B6PP45Y26G",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app)
+export const analytics = getAnalytics(app);
+export const db = getFirestore(app);
