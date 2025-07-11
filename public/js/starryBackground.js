@@ -1,7 +1,7 @@
 // Create stars
 function createStars() {
   const container = document.getElementById("starsContainer");
-  const numberOfStars = 150;
+  const numberOfStars = 200;
 
   for (let i = 0; i < numberOfStars; i++) {
     const star = document.createElement("div");
