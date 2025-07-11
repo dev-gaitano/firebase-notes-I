@@ -5,29 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ascend. | Get Started</title>
-  <link href="./css/style.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="./media/ascend-logo.png">
 </head>
 
 <body>
+  <div class="stars-container" id="starsContainer"></div>
+
   <main>
     <div id="brand">
-      <img id="logo" src="./media/ascend-logo.png" alt="logo">
+      <img id="logo" src="../media/ascend-logo.png" alt="logo">
       <h1 id="brand-name">ascend.</h1>
     </div>
+
     <div id="tagline">
       <p>Ascend.</p>
       <p>Elevate.</p>
       <p>Grow.</p>
     </div>
+
     <div id="call-to-action">
-      <button id="get-started-button">Get Started</button>
-      <a href="./signIn.html">Already have an Account?</a>
+      <a id="get-started-link" class="primary-link">Get Started</a>
+      <a href="./signIn.html" class="secondary-link">Already have an Account?</a>
     </div>
   </main>
 
-  <script src="./js/firebase-config.js" type="module" defer></script>
-  <script src="./js/app.js" type="module" defer></script>
+  <script src="../js/firebase-config.js" type="module" defer></script>
+  <script src="../js/starryBackground.js" type="module" defer></script>
 </body>
 
 </html>
