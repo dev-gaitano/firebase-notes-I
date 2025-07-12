@@ -2,6 +2,7 @@ import {
   auth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  sendPasswordResetEmail,
 } from "./firebase-config.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -58,6 +59,31 @@ document.addEventListener("DOMContentLoaded", function () {
       } catch (error) {
         console.error("Login failed:", error.message);
         // Add user-friendly error display here
+      }
+    });
+  }
+
+  // Reset password functionality
+  const resetPasswordButton = document.getElementById("reset-password-button");
+  if (resetPasswordButton) {
+    resetPasswordButton.addEventListener("click", async function () {
+      const email = document.getElementById("user-email").value;
+
+      if (!email) {
+        console.error("Please enter your email address");
+        // Show error to user
+        return;
+      }
+
+      try {
+        await sendPasswordResetEmail(auth, email);
+        console.log("Password reset email sent!");
+        // Show success message to user
+        alert("Password reset email sent! Check your inbox.");
+      } catch (error) {
+        console.error("Password reset failed:", error.message);
+        // Show error to user
+        alert("Error: " + error.message);
       }
     });
   }
