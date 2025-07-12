@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ascend. | Sign In</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../media/ascend-logo.png">
+</head>
+
+<body>
+  <div class="stars-container" id="starsContainer"></div>
+
+  <main style="background: hsl(0, 97%, 98%);">
+    <div id="title">
+      <h1>Welcome</h1>
+      <h2>Back!</h2>
+    </div>
+
+    <div id="email-sign-in">
+      <input id="user-sign-in-email" type="email">
+      <input id="user-sign-in-password" type="password">
+      <button id="login-button" class="button-primary">Login</button>
+      <a href="./forgotPassword.html">Forgot password?</a>
+    </div>
+
+    <div id="break">
+      <p>or</p>
+    </div>
+
+    <div id="third-party-sign-in">
+      <button id="google-sign-in-button">
+        <img src="../media/google-icon.png" alt="Google Logo">
+        Continue in with Google
+      </button>
+      <button id="apple-sign-in-button">
+        <img src="../media/apple-icon.png" alt="Apple Logo">
+        Continue in with Apple
+      </button>
+      <a href="./signUp.html" id="sign-up-link">
+        New here? Create account
+      </a>
+    </div>
+  </main>
+
+  <script src="../js/firebase-config.js" type="module" defer></script>
+  <script src="../js/starryBackground.js" type="module" defer></script>
+  <script src="../js/authForms.js" type="module" defer></script>
+</body>
+
+</html>
