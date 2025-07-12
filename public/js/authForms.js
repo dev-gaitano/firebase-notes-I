@@ -1,16 +1,21 @@
-import { auth, signInWithEmailAndPassword } from "./firebase-config.js";
+import {
+  auth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+} from "./firebase-config.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Handle login form
-  const loginButton = document.getElementById("login-button");
-  if (loginButton) {
-    loginButton.addEventListener("click", async () => {
-      const email = document.getElementById("user-email").value;
-      const password = document.getElementById("user-password").value;
+  const signInButton = document.getElementById("login-button");
+  if (signInButton) {
+    signInButton.addEventListener("click", async function () {
+      const signInEmail = document.getElementById("user-sign-in-email").value;
+      const signInPassword = document.getElementById(
+        "user-sign-in-password",
+      ).value;
 
       try {
-        await signInWithEmailAndPassword(auth, email, password);
-        console.log(`User logged in with email: ${email}`);
+        await signInWithEmailAndPassword(auth, signInEmail, signInPassword);
+        console.log(`User logged in with Email: ${signInEmail}`);
         window.location.href = "../index.html";
       } catch (error) {
         console.error("Login failed:", error.message);
@@ -27,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Signup functionality
   const signUpButton = document.getElementById("sign-up-button");
   if (signUpButton) {
     signUpButton.addEventListener("click", async function () {
