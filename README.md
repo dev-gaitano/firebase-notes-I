@@ -90,7 +90,6 @@ In a world filled with cluttered interfaces and overwhelming features, Ascend.up
 firebase-notes-I/
 ├── .git/                   # Git repository data
 ├── functions/              # Cloud Functions directory
-│   ├── node_modules/       # Functions dependencies
 │   ├── .eslintrc.js        # Functions linting configuration
 │   ├── index.js            # Main functions code
 │   ├── package.json        # Functions package configuration
