@@ -98,7 +98,7 @@ In a world filled with cluttered interfaces and overwhelming features, Ascend.up
 
 ```
 firebase-notes-I/
-├── extensions/             # Firebase Extensions directory
+├── .git/                   # Git repository data
 ├── functions/              # Cloud Functions directory
 │   ├── node_modules/       # Functions dependencies
 │   ├── .eslintrc.js        # Functions linting configuration
@@ -110,22 +110,31 @@ firebase-notes-I/
 │   │   └── style.css       # Main stylesheet
 │   ├── js/                 # Client-side JavaScript
 │   │   ├── app.js          # Main application logic  
-│   │   └── firebase-config.js # Firebase configuration 
+│   │   ├── authCheck.js    # Authentication check logic
+│   │   ├── authForms.js    # Authentication forms logic  
+│   │   ├── firebase-config.js # Firebase configuration  
+│   │   ├── starryBackground.js # Starry background effect  
+│   │   └── theme.js        # Theme management logic 
 │   ├── media/              # Static assets (images, fonts, etc.)
 │   │   ├── apple-icon.png  
 │   │   ├── ascend-logo.png 
 │   │   └── google-icon.png 
+│   ├── pages/              # HTML pages
+│   │   ├── forgotPassword.html # Password recovery page  
+│   │   ├── getStarted.html # Get started page  
+│   │   ├── signUp.html     # User sign-up page  
+│   │   └── signIn.html     # User sign-in page 
 │   └── index.html          # Main HTML file
-├── .git/                   # Git repository data
+├── .firebaserc             # Firebase project configuration
 ├── .gitignore              # Git ignore rules
-├── LICENSE                 # Project license
-├── README.md               # Project documentation
 ├── database.rules.json     # Realtime Database security rules
+├── firebase.json           # Firebase project configuration
 ├── firestore.indexes.json  # Firestore index definitions
 ├── firestore.rules         # Firestore security rules
-├── node_modules/           # Root project dependencies
-├── package.json            # Root package configuration
+├── LICENSE                 # Project license
 ├── package-lock.json       # Root dependency lock file
+├── package.json            # Root package configuration
+├── README.md               # Project documentation
 ├── remoteconfig.template.json # Remote Config template
 └── storage.rules           # Cloud Storage security rules
 ```
