@@ -1,29 +1,10 @@
 import {
   auth,
-  signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "./firebase-config.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const signInButton = document.getElementById("login-button");
-  if (signInButton) {
-    signInButton.addEventListener("click", async function () {
-      const signInEmail = document.getElementById("user-sign-in-email").value;
-      const signInPassword = document.getElementById(
-        "user-sign-in-password",
-      ).value;
-
-      try {
-        await signInWithEmailAndPassword(auth, signInEmail, signInPassword);
-        console.log(`User logged in with Email: ${signInEmail}`);
-        window.location.href = "../index.html";
-      } catch (error) {
-        console.error("Login failed:", error.message);
-        // Add user-friendly error display here
-      }
-    });
-  }
-
   // Handle navigation buttons
   const getStartedButton = document.getElementById("get-started-button");
   if (getStartedButton) {
@@ -56,6 +37,26 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "../index.html";
       } catch (error) {
         console.error("Sign up failed:", error.message);
+        // Add user-friendly error display here
+      }
+    });
+  }
+
+  // Signin functionality
+  const signInButton = document.getElementById("login-button");
+  if (signInButton) {
+    signInButton.addEventListener("click", async function () {
+      const signInEmail = document.getElementById("user-sign-in-email").value;
+      const signInPassword = document.getElementById(
+        "user-sign-in-password",
+      ).value;
+
+      try {
+        await signInWithEmailAndPassword(auth, signInEmail, signInPassword);
+        console.log(`User logged in with Email: ${signInEmail}`);
+        window.location.href = "../index.html";
+      } catch (error) {
+        console.error("Login failed:", error.message);
         // Add user-friendly error display here
       }
     });
