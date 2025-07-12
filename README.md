@@ -1,6 +1,5 @@
 <a id="readme-top"></a>
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -19,8 +18,6 @@
     <a href="https://github.com/dev-gaitano/firebase-notes-I/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- PROJECT SHIELDS -->
 <div align="center">
@@ -73,17 +70,12 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-
 In a world filled with cluttered interfaces and overwhelming features, Ascend.up takes a different approach.
-
-
 
 ### Built With
 
@@ -91,8 +83,6 @@ In a world filled with cluttered interfaces and overwhelming features, Ascend.up
 * CSS
 * JavaScript
 * Firebase
-
-
 
 ### Project Structure
 
@@ -141,8 +131,6 @@ firebase-notes-I/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -175,21 +163,17 @@ npx serve public
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
 - [x] Add/edit Notes
 - [ ] Filter & Sort Notes
 - [ ] Search Functionality
-- [ ] Firebase Implementation
+- [x] Firebase Implementation
     - [x] Firestore Database
-    - [ ] User Authentication
+    - [x] User Authentication
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- LICENSE -->
 ## License
@@ -197,8 +181,6 @@ npx serve public
 Distributed under the MIT license. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contact
@@ -209,10 +191,6 @@ Project Link:
 [Ascend.up](https://ascendup.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/dev-gaitano/firebase-notes-I.svg?style=for-the-badge
 [contributors-url]: https://github.com/dev-gaitano/firebase-notes-I/graphs/contributors
@@ -231,4 +209,3 @@ Project Link:
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-
