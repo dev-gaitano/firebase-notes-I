@@ -27,8 +27,25 @@ const firebaseConfig = {
   measurementId: "G-B6PP45Y26G",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const analytics = getAnalytics(app);
+
+export let analytics = null;
+if (location.hostname !== "localhost") {
+  analyticsSupported().then((supported) => {
+    if (supported) {
+      analytics = getAnalytics(app);
+      console.log("Firebase Analytics initialized.");
+    } else {
+      console.warn("Firebase Analytics not supported in this browser.");
+    }
+  });
+} else {
+}
+
 export const db = getFirestore(app);
 export const auth = getAuth(app);
+export {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+};
