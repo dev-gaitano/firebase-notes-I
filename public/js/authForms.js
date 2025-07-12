@@ -22,10 +22,36 @@ document.addEventListener("DOMContentLoaded", function () {
   // Handle navigation buttons
   const getStartedButton = document.getElementById("get-started-button");
   if (getStartedButton) {
-    getStartedButton.addEventListener("click", () => {
+    getStartedButton.addEventListener("click", function () {
       window.location.href = "../pages/signUp.html";
     });
   }
 
-  // Add other form handlers here (sign up, password reset, etc.)
+  const signUpButton = document.getElementById("sign-up-button");
+  if (signUpButton) {
+    signUpButton.addEventListener("click", async function () {
+      const signUpEmail = document.getElementById("user-sign-up-email").value;
+      const signUpPassword = document.getElementById(
+        "user-sign-up-password",
+      ).value;
+      const confirmPassword = document.getElementById(
+        "user-confirm-password",
+      ).value;
+
+      if (signUpPassword !== confirmPassword) {
+        console.error("Passwords do not match");
+        // Show error to user
+        return;
+      }
+
+      try {
+        await createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword);
+        console.log(`User Signed up with Email: ${signUpEmail}`);
+        window.location.href = "../index.html";
+      } catch (error) {
+        console.error("Sign up failed:", error.message);
+        // Add user-friendly error display here
+      }
+    });
+  }
 });

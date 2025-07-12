@@ -8,7 +8,7 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebas
 import {
   getAuth,
   signInWithEmailAndPassword,
-  connectAuthEmulator,
+  createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
