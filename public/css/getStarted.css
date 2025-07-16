@@ -18,12 +18,11 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: var(--margin-sm);
+  gap: var(--margin-m);
 }
 
 #brand {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: var(--br-sm);
@@ -54,8 +53,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: var(--br-lg) 0px;
-  gap: var(--br);
+  gap: var(--margin-m);
   height: 160px;
 }
 
@@ -96,8 +94,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--br-lg) 0px;
-  gap: var(--br-lg);
+  gap: var(--margin-m);
   height: 120px;
 }
 
@@ -116,7 +113,7 @@ main {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: var(--br-lg);
+  font-size: 12px;
   line-height: 22px;
   text-align: center;
   color: var(--text-more-muted);
