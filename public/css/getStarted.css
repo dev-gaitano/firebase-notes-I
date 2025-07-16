@@ -9,7 +9,6 @@ body {
   justify-content: flex-end;
   align-items: center;
   padding: var(--margin-lg);
-  position: relative;
   height: 100svh;
 }
 
@@ -18,7 +17,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: var(--margin-m);
+  gap: var(--margin-lg);
 }
 
 #brand {
@@ -26,7 +25,6 @@ main {
   justify-content: center;
   align-items: center;
   gap: var(--br-sm);
-  width: 108px;
   height: 20px;
 }
 
@@ -53,13 +51,12 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--margin-m);
-  height: 160px;
+  gap: var(--margin-sm);
+  padding: var(--margin-sm) 0px;
 }
 
 #p-l {
   width: 200px;
-  height: 40px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
@@ -70,7 +67,6 @@ main {
 
 #p-m {
   width: 200px;
-  height: 32px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
@@ -81,7 +77,6 @@ main {
 
 #p-s {
   width: 200px;
-  height: 28px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
@@ -94,8 +89,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--margin-m);
+  gap: var(--margin-lg);
   height: 120px;
+  padding: var(--margin-sm) 0px;
 }
 
 #get-started-button {
@@ -106,17 +102,11 @@ main {
 }
 
 #sign-in-link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   height: 22px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 22px;
   text-align: center;
   color: var(--text-more-muted);
-  flex-grow: 0;
-  align-items: center;
 }
