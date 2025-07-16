@@ -8,7 +8,6 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  gap: var(--margin-lg);
   padding: var(--margin-lg);
   position: relative;
   height: 100svh;
@@ -19,7 +18,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 316px;
+  gap: var(--margin-lg);
 }
 
 #brand {
