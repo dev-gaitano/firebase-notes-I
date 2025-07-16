@@ -18,7 +18,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: var(--margin-lg);
+  gap: var(--margin-sm);
 }
 
 #brand {
