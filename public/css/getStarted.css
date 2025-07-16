@@ -94,10 +94,12 @@ body {
   background: var(--bg-dark);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
+  align-items: center;
   gap: var(--margin-lg);
   padding: var(--margin-lg);
   position: relative;
+  height: 100svh;
 }
 
 .stars-container {
@@ -139,10 +141,9 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: 0px;
-  width: 398px;
-  height: 334px;
+  height: 316px;
 }
 
 #brand {
@@ -150,10 +151,9 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: var(--br-lg) 0px;
   gap: var(--br-sm);
   width: 108px;
-  height: 54px;
+  height: 20px;
 }
 
 #logo {
@@ -170,73 +170,49 @@ main {
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
-  line-height: 22px;
+  line-height: 20px;
   text-align: center;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 
 #tagline {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: var(--br-lg) 0px;
   gap: var(--br);
-  width: 398px;
-  height: 156px;
+  height: 160px;
 }
 
 #p-l {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 10px;
   width: 200px;
   height: 40px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
-  line-height: 22px;
   text-align: center;
   color: var(--primary);
 }
 
 #p-m {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 10px;
   width: 200px;
   height: 32px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
-  line-height: 22px;
   text-align: center;
   color: var(--text-muted);
 }
 
 #p-s {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 10px;
   width: 200px;
   height: 28px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
-  line-height: 22px;
   text-align: center;
   color: var(--text-more-muted);
 }
@@ -247,29 +223,20 @@ main {
   align-items: center;
   padding: var(--br-lg) 0px;
   gap: var(--br-lg);
-  width: 398px;
-  height: 124px;
+  height: 120px;
 }
 
 #get-started-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 10px;
-  width: 398px;
-  height: 54px;
+  height: 52px;
+  width: 90vw;
   background: #D9D9D9;
-  border-radius: 99px;
+  border-radius: var(--br-full);
 }
 
 #sign-in-link {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0px;
-  width: 398px;
   height: 22px;
   font-family: 'Montserrat';
   font-style: normal;
