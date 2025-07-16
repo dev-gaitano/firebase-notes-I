@@ -96,7 +96,9 @@ firebase-notes-I/
 │   └── package-lock.json   # Functions dependency lock file
 ├── public/                 # Firebase Hosting static files
 │   ├── css/                # Stylesheets
-│   │   └── style.css       # Main stylesheet
+│   │   ├── getStarted.css  # Get Started page stylesheet  
+│   │   ├── main.css        # Main stylesheet 
+│   │   └── style.css       # Home page stylesheet
 │   ├── js/                 # Client-side JavaScript
 │   │   ├── app.js          # Main application logic  
 │   │   ├── authCheck.js    # Authentication check logic
