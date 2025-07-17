@@ -3,21 +3,23 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
+  signInWithPopup,
+  googleProvider,
 } from "./firebase-config.js";
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   // Handle navigation buttons
   const getStartedButton = document.getElementById("get-started-button");
   if (getStartedButton) {
-    getStartedButton.addEventListener("click", function () {
+    getStartedButton.addEventListener("click", function() {
       window.location.href = "../pages/signUp.html";
     });
   }
 
-  // Signup functionality
+  // Email Signup functionality
   const signUpButton = document.getElementById("sign-up-button");
   if (signUpButton) {
-    signUpButton.addEventListener("click", async function () {
+    signUpButton.addEventListener("click", async function() {
       const signUpEmail = document.getElementById("user-sign-up-email").value;
       const signUpPassword = document.getElementById(
         "user-sign-up-password",
@@ -43,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Signin functionality
+  // Email Signin functionality
   const signInButton = document.getElementById("login-button");
   if (signInButton) {
-    signInButton.addEventListener("click", async function () {
+    signInButton.addEventListener("click", async function() {
       const signInEmail = document.getElementById("user-sign-in-email").value;
       const signInPassword = document.getElementById(
         "user-sign-in-password",
@@ -66,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Reset password functionality
   const resetPasswordButton = document.getElementById("reset-password-button");
   if (resetPasswordButton) {
-    resetPasswordButton.addEventListener("click", async function () {
+    resetPasswordButton.addEventListener("click", async function() {
       const email = document.getElementById("user-email").value;
 
       if (!email) {
@@ -88,3 +90,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Google Auth
+const googleAuthButton = document.getElementById("google-auth-button")
+if (googleAuthButton) {
+  googleAuthButton.addEventListener("click", async function() {
+    try {
+      const result = await signInWithPopup(auth, googleProvider)
+      const user = result.user
+      console.log("Signed in as", user.displayName)
+    } catch (err) {
+      console.error("Sign-in error:", err.message)
+    }
+  })
+}
