@@ -182,6 +182,11 @@ ul {
   text-align: center;
 }
 
+.third-party-button {
+  flex-direction: row;
+  position: relative;
+}
+
 .primary-icon {
   position: absolute;
   height: 24px;
