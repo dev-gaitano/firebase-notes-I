@@ -5,40 +5,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ascend. | Sign In</title>
-  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/signIn.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="../media/ascend-logo.png">
 </head>
 
 <body>
   <div class="stars-container" id="starsContainer"></div>
 
-  <main style="background: hsl(0, 97%, 98%);">
-    <div id="title">
-      <h1>Welcome</h1>
-      <h2>Back!</h2>
+  <main>
+    <div id="title" class="flexed-div-v">
+      <h1 class="t-regular">Welcome</h1>
+      <h2 class="t-subtle">Back!</h2>
     </div>
 
-    <div id="email-sign-in">
-      <input id="user-sign-in-email" type="email">
-      <input id="user-sign-in-password" type="password">
-      <button id="login-button" class="button-primary">Login</button>
-      <a href="./forgotPassword.html">Forgot password?</a>
+    <div id="email-sign-in" class="flexed-div-v">
+      <input id="user-sign-in-email" class="primary-input" type="email"
+      placeholder="Email">
+      <input id="user-sign-in-password" class="primary-input" type="password"
+      placeholder="Password">
+      <button id="login-button" class="primary-button">Login</button>
+      <a href="./forgotPassword.html" class="primary-link">Forgot password?</a>
     </div>
 
-    <div id="break">
+    <div class="break">
       <p>or</p>
     </div>
 
-    <div id="third-party-sign-in">
-      <button id="google-sign-in-button">
-        <img src="../media/google-icon.png" alt="Google Logo">
+    <div id="third-party-sign-in" class="flexed-div-v">
+      <button id="google-sign-in-button" class="secondary-button flexed-div-v">
+        <img class="primary-icon" src="../media/google-icon.png" alt="Google Logo">
         Continue in with Google
       </button>
-      <button id="apple-sign-in-button">
-        <img src="../media/apple-icon.png" alt="Apple Logo">
+      <button id="apple-sign-in-button" class="secondary-button flexed-div-v">
+        <img class="primary-icon" src="../media/apple-icon.png" alt="Apple Logo">
         Continue in with Apple
       </button>
-      <a href="./signUp.html" id="sign-up-link">
+      <a href="./signUp.html" id="sign-up-link" class="primary-link">
         New here? Create account
       </a>
     </div>

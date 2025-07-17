@@ -182,6 +182,13 @@ ul {
   text-align: center;
 }
 
+.primary-icon {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: var(--margin-lg);
+}
+
 body {
   background: var(--bg-dark);
   display: flex;
