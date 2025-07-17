@@ -43,6 +43,7 @@ main {
 }
 
 #tagline {
+  gap: var(--margin-sm);
   padding: var(--margin-sm) 0px 0px 0px;
 }
 
