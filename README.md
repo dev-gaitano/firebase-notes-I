@@ -98,6 +98,7 @@ firebase-notes-I/
 │   ├── css/                # Stylesheets
 │   │   ├── getStarted.css  # Get Started page stylesheet  
 │   │   ├── main.css        # Main stylesheet 
+│   │   ├── signUp.css      # Sign Up page stylesheet 
 │   │   └── style.css       # Home page stylesheet
 │   ├── js/                 # Client-side JavaScript
 │   │   ├── app.js          # Main application logic  
