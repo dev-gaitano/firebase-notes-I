@@ -138,7 +138,10 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+To run you have to have the following requirements installed;
+
+* Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+* Firebase BaaS
 
 ### Installation
 
