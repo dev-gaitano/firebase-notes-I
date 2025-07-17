@@ -190,6 +190,7 @@ Project Link:
 [Ascend.up](https://ascendup.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/dev-gaitano/firebase-notes-I.svg?style=for-the-badge
 [contributors-url]: https://github.com/dev-gaitano/firebase-notes-I/graphs/contributors
