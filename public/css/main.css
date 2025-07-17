@@ -17,9 +17,9 @@
   --warning: hsl(52 70% 57%);
   --success: hsl(146 70% 59%);
   --info: hsl(217 70% 65%);
-  --margin-lg: 16px;
-  --margin-m: 12px;
-  --margin-sm: 8px;
+  --margin-lg: 12px;
+  --margin-m: 8px;
+  --margin-sm: 4px;
   --br-full: 999px;
   --br-lg: 16px;
   --br: 12px;
