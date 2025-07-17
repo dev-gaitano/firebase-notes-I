@@ -190,6 +190,7 @@ body {
   gap: var(--margin-lg);
   padding: var(--margin-lg);
   position: relative;
+  height: 97svh;
 }
 
 .stars-container {
