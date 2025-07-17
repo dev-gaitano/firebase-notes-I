@@ -46,5 +46,6 @@ main {
 
 #call-to-action {
   height: 120px;
+  gap: var(--margin-lg);
   padding: var(--margin-sm) 0px 0px 0px;
 }
