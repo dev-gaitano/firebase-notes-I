@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import './main.css';
+
+body {
+  justify-content: flex-end;
+  align-items: center;
+  height: 100svh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--margin-lg);
+}
+
+#title {
+  gap: var(--margin-sm);
+}
