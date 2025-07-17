@@ -37,9 +37,6 @@
   <a href="https://github.com/dev-gaitano/firebase-notes-I/LICENSE">
     <img src="https://img.shields.io/github/license/dev-gaitano/firebase-notes-I.svg?style=for-the-badge" alt="License">
   </a>
-  <a href="https://www.linkedin.com/in/eugene-gaitano">
-    <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" alt="LinkedIn">
-  </a>
 
 </div>
 
