@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/dev-gaitano/firebase-notes-I">
-    <img src="https://i.pinimg.com/736x/57/d8/4b/57d84b93155cdcdfdbd7cc611e3f0886.jpg" alt="Logo" width="80" height="80">
+    <img src="./public/media/ascend-logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Ascend.up</h3>
