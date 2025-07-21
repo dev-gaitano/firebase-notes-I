@@ -171,9 +171,10 @@ npx serve public
 - [x] CRUD Implementation
 - [ ] Filter & Sort Notes
 - [ ] Search Functionality
-- [x] Firebase Implementation
+- [ ] Firebase Implementation
     - [x] Firestore Database
     - [x] User Authentication
+    - [ ] User Authorization
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
