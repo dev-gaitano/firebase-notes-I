@@ -7,7 +7,7 @@
     <img src="./public/media/ascend-logo-48x48.png" alt="Logo" width="48" height="48">
   </a>
 
-<h3 align="center">Ascend.up</h3>
+  <h3 align="center">Ascend.up</h3>
 
   <p align="center">
     A clean, minimal notes app built for focus and flow.
