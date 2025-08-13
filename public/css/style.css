@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import './main.css';
+@import url("https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./main.css";
 
 header {
   color: var(--text);
@@ -81,6 +81,11 @@ footer {
   flex: 1;
 }
 
+#container-search:focus-within #search-icon {
+  color: var(--primary);
+  opacity: 1;
+}
+
 #search-icon {
   width: 20px;
   height: 20px;
@@ -96,6 +101,10 @@ footer {
   color: var(--text-muted);
 }
 
+#search-bar:focus {
+  outline: none;
+}
+
 #search-bar::placeholder {
   color: var(--text-more-muted);
 }
@@ -108,15 +117,22 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.button-primary:hover .icon-primary {
+  color: var(--primary);
 }
 
 .icon-primary {
   width: 20px;
   height: 20px;
   color: var(--text-more-muted);
+  transition: all 0.5s ease-in-out;
 }
 
 .note-item {
+  cursor: pointer;
   background: var(--bg);
   border-radius: var(--br-lg);
   padding: var(--margin-lg);
@@ -126,6 +142,12 @@ footer {
   color: var(--text-muted);
   margin-bottom: var(--margin-m);
   animation: fadeInRight 0.8s ease-out forwards;
+  transition: all 0.5s ease-in-out;
+}
+
+.note-item:hover {
+  background: var(--bg-light);
+  margin-bottom: var(--margin-lg);
 }
 
 #note-header {
@@ -153,15 +175,23 @@ footer {
 }
 
 #delete-button {
+  cursor: pointer;
   width: 16px;
   height: 16px;
   color: var(--text-more-muted);
   background: none;
+  transition: all 0.5s ease-in-out;
+}
+
+#delete-button:hover {
+  color: var(--danger);
 }
 
 #new-note-button {
+  cursor: pointer;
   background: var(--bg-light);
   border-radius: var(--br-full);
+  border: 4px solid var(--primary);
   height: 48px;
   width: 48px;
   display: flex;
@@ -173,7 +203,7 @@ footer {
 #plus-icon {
   width: 24px;
   height: 24px;
-  color: var(--text-muted);
+  color: var(--primary);
 }
 
 #new-note-input {
@@ -183,8 +213,15 @@ footer {
   display: flex;
   flex-grow: 1;
   padding-left: var(--margin-m);
-  animation-delay: 0.0s;
+  animation-delay: 0s;
   color: var(--text);
+  transition: all 0.3s ease-in-out;
+}
+
+#new-note-input:focus {
+  outline: none;
+  height: 42px;
+  border: 4px solid var(--primary);
 }
 
 #new-note-input::placeholder {
@@ -192,7 +229,7 @@ footer {
 }
 
 .footer-item {
-  animation: fadeInUp 2.0s ease-out forwards;
+  animation: fadeInUp 2s ease-out forwards;
 }
 
 .modal {
@@ -263,7 +300,7 @@ footer {
 
 /* Staggered animation delays for notes */
 .note-item:nth-child(1) {
-  animation-delay: 0.0s;
+  animation-delay: 0s;
 }
 
 .note-item:nth-child(2) {
