@@ -19,27 +19,6 @@
   </p>
 </div>
 
-<!-- PROJECT SHIELDS -->
-<div align="center">
-
-  <a href="https://github.com/dev-gaitano/firebase-notes-I/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/dev-gaitano/firebase-notes-I.svg?style=for-the-badge" alt="Contributors">
-  </a>
-  <a href="https://github.com/dev-gaitano/firebase-notes-I/network/members">
-    <img src="https://img.shields.io/github/forks/dev-gaitano/firebase-notes-I.svg?style=for-the-badge" alt="Forks">
-  </a>
-  <a href="https://github.com/dev-gaitano/firebase-notes-I/stargazers">
-    <img src="https://img.shields.io/github/stars/dev-gaitano/firebase-notes-I.svg?style=for-the-badge" alt="Stars">
-  </a>
-  <a href="https://github.com/dev-gaitano/firebase-notes-I/issues">
-    <img src="https://img.shields.io/github/issues/dev-gaitano/firebase-notes-I.svg?style=for-the-badge" alt="Issues">
-  </a>
-  <a href="https://github.com/dev-gaitano/firebase-notes-I/LICENSE">
-    <img src="https://img.shields.io/github/license/dev-gaitano/firebase-notes-I.svg?style=for-the-badge" alt="License">
-  </a>
-
-</div>
-
 <br />
 <br />
 
